@@ -20,7 +20,9 @@ public class FunCtionActivity extends AppCompatActivity {
         startActivity(new Intent(FunCtionActivity.this,Android_DataActivity.class));
     }
     public void onWelfare(View view){
-        //吐司
        startActivity(new Intent(FunCtionActivity.this,FuLiActivity.class));
+    }
+    public  void onView(View view){
+        startActivity(new Intent(FunCtionActivity.this,ViewActivity.class));
     }
 }

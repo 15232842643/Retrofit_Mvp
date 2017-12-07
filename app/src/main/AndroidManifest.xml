@@ -21,7 +21,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".Android_DataActivity"></activity>
-        <activity android:name=".FuLiActivity"></activity>
+        <activity android:name=".FuLiActivity"/>
+        <activity android:name=".ViewActivity"/>
     </application>
 
 </manifest>

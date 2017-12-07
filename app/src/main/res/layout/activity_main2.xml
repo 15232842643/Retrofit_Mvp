@@ -24,5 +24,10 @@
         android:layout_width="match_parent"
         android:text="小福利"
         android:layout_height="wrap_content" />
+    <Button
+        android:onClick="onView"
+        android:layout_width="match_parent"
+        android:text="自定义View"
+        android:layout_height="wrap_content" />
 </LinearLayout>
 </LinearLayout>
