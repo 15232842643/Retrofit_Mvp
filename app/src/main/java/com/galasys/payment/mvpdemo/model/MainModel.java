@@ -36,7 +36,7 @@ public class MainModel implements MainContract.Model {
     @Override
     public void getMovie(String start, String count, final String type, final DataCallBack dataCallBack) {
 
-        ApiMannger.getApiService(Constanse.MOVIE).getMovie(start, count).enqueue(new Callback<DouBanBean>() {
+        ApiMannger.getApiService( ).getMovie(start, count).enqueue(new Callback<DouBanBean>() {
             @Override
             public void onResponse(Call<DouBanBean> call, Response<DouBanBean> response) {
                 try {

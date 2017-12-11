@@ -34,15 +34,15 @@ public interface ApiService {
      * @param count 加载条目
      * @return //api/data/Android/10/1
      */
-    @Headers({"url_Movie:movie"})
+    @Headers({"retrofitUrl:movie"})
     @GET("v2/movie/top250?")
     Call<DouBanBean> getMovie(@Query("start") String start, @Query("count") String count);
 
-    @Headers({"url_ganhuo:android"})
-    @GET("data/Android/10/1")
+    @Headers({"retrofitUrl:android"})
+    @GET("api/data/Android/10/1")
     Call<GetAndroidData> getAndroidData();
 
-    @Headers({"url_ganhuo:fuli"})
-    @GET("data/福利/10/1")
+    @Headers({"retrofitUrl:fuli"})
+    @GET("api/data/福利/10/1")
     Call<FuLiBean> getFuliData();
 }

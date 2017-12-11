@@ -31,10 +31,10 @@ public class ApiInterceptor implements Interceptor {
         //获取request的创建者builder
         Request.Builder builder = request.newBuilder();
         //从request中获取headers，通过给定的键url_name
-        List<String> headerValues = request.headers("url_ganhuo");
+        List<String> headerValues = request.headers("retrofitUrl");
         if (headerValues != null && headerValues.size() > 0) {
             //如果有这个header，先将配置的header删除，因此header仅用作app和okhttp之间使用
-            builder.removeHeader(HttpConfig.GANHUO_KEY);
+            builder.removeHeader(HttpConfig.RETROFITURL);
 
             //匹配获得新的BaseUrl
             String headerValue = headerValues.get(0);

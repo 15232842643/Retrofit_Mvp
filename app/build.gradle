@@ -45,4 +45,5 @@ dependencies {
     compile 'com.android.support:design:26.0.0-alpha1'
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.github.Ajian-studio:GABottleLoading:1.0.1'
 }

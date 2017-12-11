@@ -28,9 +28,9 @@ public class Constanse {
     /**
      * BaseUrl
      */
-    public static  final String GANK="http://gank.io/api/";
+    public static  final String GANK="http://gank.io/";
 
-    public static    String BaseUrl="http://gank.io/api/";
+    public static    String BaseUrl="http://gank.io/";
     /**
      * BaseUrl
      */

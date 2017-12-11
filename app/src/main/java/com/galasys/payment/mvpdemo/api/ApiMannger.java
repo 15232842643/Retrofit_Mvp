@@ -30,42 +30,14 @@ public class ApiMannger {
      * @return
      */
 
-    public static ApiService getApiService(String newBaseUrl) {
-        Constanse.BaseUrl=newBaseUrl;
+    public static ApiService getApiService( ) {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         builder.addInterceptor(new HttpLoggingInterceptor(new HttpLogIntercepter()));
-      //  builder.addInterceptor(new ApiInterceptor());
+        builder.addInterceptor(new ApiInterceptor());
         OkHttpClient okHttpClient = builder.build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                 .baseUrl(Constanse.BaseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(okHttpClient)
-                .build();
-        return retrofit.create(ApiService.class);
-
-    }
-
-    public static ApiService getApiService_2() {
-        OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        builder.addInterceptor(new HttpLoggingInterceptor(new HttpLogIntercepter()));
-        OkHttpClient okHttpClient = builder.build();
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constanse.GANK)
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(okHttpClient)
-                .build();
-        return retrofit.create(ApiService.class);
-
-    }
-
-    public static ApiService getApiService_3() {
-        OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        builder.addInterceptor(new HttpLoggingInterceptor(new HttpLogIntercepter()));
-        OkHttpClient okHttpClient = builder.build();
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://gank.io/api/")
+                 .baseUrl(Constanse.MOVIE)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();

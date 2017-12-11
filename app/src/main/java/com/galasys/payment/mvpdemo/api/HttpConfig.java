@@ -12,8 +12,5 @@ package com.galasys.payment.mvpdemo.api;
  */
 
 public class HttpConfig {
-
-
-    public static final String MOVIE_KEY = "url_Movie";
-    public static final String GANHUO_KEY = "url_ganhuo";
+    public static final String RETROFITURL = "retrofitUrl";
 }

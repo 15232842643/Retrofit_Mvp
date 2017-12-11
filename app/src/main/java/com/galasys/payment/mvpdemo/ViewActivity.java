@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.gastudio.gabottleloading.library.GABottleLoadingView;
+
 /**
  * 项目名称：MyApplication
  * 类名称：
@@ -20,5 +22,6 @@ public class ViewActivity extends Activity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_layout);
+        ((GABottleLoadingView) findViewById(R.id.ga_bottle_loading_view)).performAnimation();
     }
 }

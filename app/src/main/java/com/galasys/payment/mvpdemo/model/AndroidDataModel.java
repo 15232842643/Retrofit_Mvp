@@ -3,7 +3,6 @@ package com.galasys.payment.mvpdemo.model;
 import com.galasys.payment.mvpdemo.adpter.DouBanBean;
 import com.galasys.payment.mvpdemo.api.ApiMannger;
 import com.galasys.payment.mvpdemo.bean.GetAndroidData;
-import com.galasys.payment.mvpdemo.constanse.Constanse;
 import com.galasys.payment.mvpdemo.contract.AndroidDataContract;
 
 import java.util.List;
@@ -27,7 +26,7 @@ public class AndroidDataModel implements AndroidDataContract.Model {
 
     @Override
     public void getAndroidData(final AndroidDataCallBack dataCallBack) {
-        ApiMannger.getApiService(Constanse.GANK).getAndroidData().enqueue(new Callback<GetAndroidData>() {
+        ApiMannger.getApiService( ).getAndroidData().enqueue(new Callback<GetAndroidData>() {
             @Override
             public void onResponse(Call<GetAndroidData> call, Response<GetAndroidData> response) {
                 dataCallBack.onSuccessAndroid(response.body().getResults());

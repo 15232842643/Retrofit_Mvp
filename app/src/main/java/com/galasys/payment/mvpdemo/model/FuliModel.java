@@ -2,7 +2,6 @@ package com.galasys.payment.mvpdemo.model;
 
 import com.galasys.payment.mvpdemo.api.ApiMannger;
 import com.galasys.payment.mvpdemo.bean.FuLiBean;
-import com.galasys.payment.mvpdemo.constanse.Constanse;
 import com.galasys.payment.mvpdemo.contract.FuliContract;
 
 import java.util.List;
@@ -25,7 +24,7 @@ import retrofit2.Response;
 public class FuliModel implements FuliContract.Model {
     @Override
     public void M_GetFuLi(final FuliModel.FuLiCallBack fuLiCallBack) {
-        ApiMannger.getApiService(Constanse.GANK).getFuliData().enqueue(new Callback<FuLiBean>() {
+        ApiMannger.getApiService( ).getFuliData().enqueue(new Callback<FuLiBean>() {
             @Override
             public void onResponse(Call<FuLiBean> call, Response<FuLiBean> response) {
                 fuLiCallBack.onSuccess(response.body().results);
